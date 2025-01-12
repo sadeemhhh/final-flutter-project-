@@ -35,7 +35,7 @@ class Welcomepage extends StatelessWidget {
                     );
                   },
                   child: const Text(
-                    "get started",
+                    "get started why dont you !",
                     style: TextStyle(
                       fontSize: 16, 
                       color: Color.fromARGB(255, 250, 194, 250), 

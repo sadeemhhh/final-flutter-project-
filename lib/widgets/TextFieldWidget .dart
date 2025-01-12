@@ -12,8 +12,7 @@ class TextFieldWidget extends StatefulWidget {
     required this.text,
     required this.controller,
   });
-
-  @override
+@override
   State<TextFieldWidget> createState() => _TextFieldWidgetState();
 }
 

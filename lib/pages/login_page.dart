@@ -15,13 +15,15 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  TextEditingController emailController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
+  TextEditingController emailCntrl = TextEditingController();
+  TextEditingController passwordCntrl = TextEditingController();
+  
+
 
   @override
   void dispose() {
-    emailController.dispose();
-    passwordController.dispose();
+    emailCntrl.dispose();
+    passwordCntrl.dispose();
     super.dispose();
   }
 
@@ -30,34 +32,34 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 234, 242, 212),
+        backgroundColor: const Color.fromARGB(255, 69, 191, 232),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
             const Text(
-              "Log-in",
+              "Log-in ! or dont its up to you",
               style: TextStyle(
                 fontSize: 24,
               ),
             ),
             height24,
             TextFieldWidget(
-              controller: emailController,
-              text: "enter email here",
+              controller: emailCntrl,
+              text: "enter email :)",
             ),
             height24,
             TextFieldWidget(
-              controller: passwordController,
-              text: "enter password here",
+              controller: passwordCntrl,
+              text: "enter password :)",
               
               
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text("If you do not have an account:"),
+                const Text("how about we make you an account:"),
                 TextButton(
                   onPressed: () {
                     context.pushAndRemove(
@@ -75,8 +77,8 @@ class _LoginPageState extends State<LoginPage> {
               onPressed: () async {
                 try {
                   await Database().login(
-                    email: emailController.text,
-                    password: passwordController.text,
+                    email: emailCntrl.text,
+                    password: passwordCntrl.text,
                   );
                   if (context.mounted) {
                     Navigator.push(

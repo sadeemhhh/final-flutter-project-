@@ -9,10 +9,6 @@ Future<void> main() async {
  WidgetsFlutterBinding.ensureInitialized();
 await dotenv.load(fileName: '.env');
 
-// Debug print
-print('Supabase URL: ${dotenv.env['supabaseURL']}');
-print('Supabase Key: ${dotenv.env['supabaseKey']}');
-
 await Supabase.initialize(
   url: dotenv.env['supabaseURL']!,
   anonKey: dotenv.env['supabaseKey']!,

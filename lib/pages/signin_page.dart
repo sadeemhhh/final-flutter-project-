@@ -14,14 +14,14 @@ class SignIn extends StatefulWidget {
 }
 
 class _SignInState extends State<SignIn> {
-   TextEditingController email = TextEditingController();
-    TextEditingController password = TextEditingController();
+   TextEditingController emailaddress = TextEditingController();
+    TextEditingController passwordaddress = TextEditingController();
 
 @override
 @override
   void dispose() {
-    email.dispose();
-    password.dispose();
+    emailaddress.dispose();
+    passwordaddress.dispose();
     super.dispose();
   }
   @override
@@ -35,12 +35,12 @@ class _SignInState extends State<SignIn> {
         child: Column(
           children: [
             Text(
-              "sing up",
+              "sign up or dont it up to you ! jk",
               style: TextStyle(fontSize: 24),
             ),
             height24,
             TextField(
-              controller: email,
+              controller: emailaddress,
               decoration: const InputDecoration(
                 labelText: "enter email :)",
                 border: OutlineInputBorder(
@@ -48,7 +48,7 @@ class _SignInState extends State<SignIn> {
               ),
             ),
             height24,
-            TextField(controller: password,
+            TextField(controller: passwordaddress,
             decoration: const InputDecoration(
                 labelText: "enter password :)",
                 border: OutlineInputBorder(
@@ -57,7 +57,7 @@ class _SignInState extends State<SignIn> {
             ),
             Row(
               mainAxisAlignment:MainAxisAlignment.center, children:[
-              Text("if you have an account"),
+              Text("you have an account way to go !"),
              TextButton(onPressed: (){
               context.pushAndRemove(const LoginPage());
              }, child: Text("login",style: TextStyle(color: Colors.black),),),
@@ -66,7 +66,7 @@ class _SignInState extends State<SignIn> {
             height24,
             ElevatedButton(onPressed: () async {
               try{
-              await Database().singup(email: email.text, password: password.text);
+              await Database().singup(email: emailaddress.text, password: passwordaddress.text);
               if(context.mounted){
                 Navigator.push(context,
                  MaterialPageRoute(builder: (context)=> const LoginPage()));
@@ -75,7 +75,7 @@ class _SignInState extends State<SignIn> {
             }}, style: ElevatedButton.styleFrom(
               backgroundColor: const Color.fromARGB(255, 117, 106, 223)
             ),
-             child: const Text("sing up",style: TextStyle(fontSize: 18,color: Colors.black),))
+             child: const Text("sign up why dont you !",style: TextStyle(fontSize: 18,color: Colors.black),))
           ],
         ),
       ),
