@@ -11,7 +11,7 @@ class Movie_Page extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MoviePage(),
+      home: Movie_Page(),
     );
   }
 }
