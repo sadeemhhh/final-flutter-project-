@@ -12,7 +12,7 @@ class Welcomepage extends StatelessWidget {
         height: double.infinity,
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: NetworkImage("data:https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCk6uMsvoo8BvYRWiNnuloFv5dBrN1oshC1g&s"),
+            image: NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCk6uMsvoo8BvYRWiNnuloFv5dBrN1oshC1g&s"),
             fit: BoxFit.cover,
           ),
         ),

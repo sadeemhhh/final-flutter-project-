@@ -1,10 +1,10 @@
 
-
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Services/database.dart';
 import 'package:flutter_application_1/constant/spacing.dart';
 import 'package:flutter_application_1/extension/navigation.dart';
 import 'package:flutter_application_1/pages/login_page.dart';
+import 'package:flutter_application_1/pages/movie_page.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({super.key});
@@ -69,7 +69,7 @@ class _SignInState extends State<SignIn> {
               await Database().singup(email: emailaddress.text, password: passwordaddress.text);
               if(context.mounted){
                 Navigator.push(context,
-                 MaterialPageRoute(builder: (context)=> const LoginPage()));
+                 MaterialPageRoute(builder: (context)=>LoginPage()));
               }} catch(e){
                 ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.toString())),);
             }}, style: ElevatedButton.styleFrom(

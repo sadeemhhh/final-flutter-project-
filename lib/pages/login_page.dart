@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Services/database.dart';
 import 'package:flutter_application_1/constant/spacing.dart';
 import 'package:flutter_application_1/extension/navigation.dart';
+import 'package:flutter_application_1/pages/movie_page.dart';
 import 'package:flutter_application_1/pages/signin_page.dart';
 import 'package:flutter_application_1/widgets/TextFieldWidget%20.dart';
 class LoginPage extends StatefulWidget {
@@ -65,7 +66,7 @@ class _LoginPageState extends State<LoginPage> {
                     );
                   },
                   child: const Text(
-                    "Signin",
+                    "Signin right here",
                     style: TextStyle(color:  Colors.black),
                   ),
                 ),
@@ -82,7 +83,7 @@ class _LoginPageState extends State<LoginPage> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const SignIn()),
+                          builder: (context) =>  MoviePage()),
                     );
                   }
                 } catch (e) {
@@ -95,7 +96,7 @@ class _LoginPageState extends State<LoginPage> {
                 backgroundColor: const Color.fromARGB(255, 248, 237, 237)
               ),
               child: const Text(
-                "Login",
+                "Login right heree",
                 style: TextStyle(fontSize: 18,color:  Colors.black),
               ),
             ),
