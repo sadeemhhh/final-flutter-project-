@@ -4,6 +4,8 @@ void main() {
   runApp(Movie_Page());
 }
 class Movie_Page extends StatelessWidget {
+  const Movie_Page({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -33,6 +35,8 @@ class MoviePage extends StatelessWidget {
       imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE2bwYVDPZkWLH7QhDPz9lZ4-xD9uQ2i8Yqg&s',
     ),
   ];
+
+  MoviePage({super.key});
 
   @override
   Widget build(BuildContext context) {

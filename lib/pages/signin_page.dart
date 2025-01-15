@@ -4,7 +4,6 @@ import 'package:flutter_application_1/Services/database.dart';
 import 'package:flutter_application_1/constant/spacing.dart';
 import 'package:flutter_application_1/extension/navigation.dart';
 import 'package:flutter_application_1/pages/login_page.dart';
-import 'package:flutter_application_1/pages/movie_page.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({super.key});
