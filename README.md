@@ -11,3 +11,7 @@ signup into application
 welcome page 
 
 ![get started](https://github.com/user-attachments/assets/2da2c0c6-84a2-404f-9d45-bb35869aa31a)
+
+movie selection page
+
+![movies](https://github.com/user-attachments/assets/2102bdfa-6a45-460e-87bc-6362d2841fc3)
